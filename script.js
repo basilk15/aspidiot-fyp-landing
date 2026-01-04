@@ -60,8 +60,19 @@ const handleScroll = () => {
   activateStoryLine();
 };
 
-window.addEventListener("scroll", () => {
-  window.requestAnimationFrame(handleScroll);
-});
+let isTicking = false;
+
+const onScroll = () => {
+  if (isTicking) {
+    return;
+  }
+  isTicking = true;
+  window.requestAnimationFrame(() => {
+    handleScroll();
+    isTicking = false;
+  });
+};
+
+window.addEventListener("scroll", onScroll, { passive: true });
 
 handleScroll();

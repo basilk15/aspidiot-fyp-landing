@@ -836,6 +836,39 @@ body.is-loaded .hero-content {
     min-height: 190px;
   }
 
+  .packet {
+    min-width: clamp(160px, 72vw, 230px);
+    max-width: 260px;
+  }
+
+  .packet-body {
+    font-size: 0.72rem;
+  }
+
+  .hacker-figure img {
+    width: clamp(90px, 22vw, 130px);
+  }
+
+  .lock-indicator img {
+    width: clamp(70px, 18vw, 100px);
+  }
+
+  .story-lines {
+    perspective: none;
+  }
+
+  .story-line {
+    min-height: 44vh;
+    max-width: 42ch;
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    transform: translateY(var(--line-shift, 0px));
+  }
+
+  .story-logo {
+    width: min(70vw, 220px);
+    margin-top: 0.8rem;
+  }
+
   .network {
     padding: 4rem 1.25rem 6rem;
   }
@@ -851,6 +884,19 @@ body.is-loaded .hero-content {
 
   .network-summary {
     max-width: 42ch;
+  }
+
+  .network-lines .line,
+  .node::before,
+  .node::after,
+  .link-track::before,
+  .link-track::after,
+  .device {
+    animation: none;
+  }
+
+  .node img {
+    filter: none;
   }
 
   .narrative .content {
