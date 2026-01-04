@@ -600,6 +600,8 @@ body.is-loaded .hero-content {
   color: var(--ink);
   text-shadow: 0 0 30px rgba(89, 247, 255, 0.35);
   animation: slow-glow 4s ease-in-out infinite;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .reveal {
@@ -814,7 +816,7 @@ body.is-loaded .hero-content {
   }
 
   .logo {
-    width: min(92vw, 520px);
+    width: min(98vw, 600px);
     margin: 0 auto;
   }
 
@@ -907,5 +909,10 @@ body.is-loaded .hero-content {
 @media (max-width: 480px) {
   .scroll-hint {
     font-size: 0.75rem;
+  }
+
+  .coming-soon {
+    font-size: clamp(2rem, 9vw, 3.2rem);
+    letter-spacing: 0.12em;
   }
 }
